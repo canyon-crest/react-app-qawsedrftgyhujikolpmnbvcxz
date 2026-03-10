@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none; 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden; 
+    background-color: #333; 
+}
+
+li {
+    display: inline-flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    color:aliceblue;
+    box-align: center;
+    font-size:150%;
+}
+
+
+
+
+
