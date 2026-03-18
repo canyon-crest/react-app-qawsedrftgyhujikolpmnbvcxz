@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import GoogleLogin from './signin'
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -9,15 +8,8 @@ function Home() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>My React Website</h1>
+      <p>This is the homepage for my website. Below is a clicking game and an option to sign in.</p>
       <div className="card">
         <button onClick={() => setCount((count) => count+increase) } style={{ marginBottom: '20px' }}>
           count is {count}
@@ -40,14 +32,10 @@ function Home() {
             turn off super mode
           </button>
         </div>
-        
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <GoogleLogin></GoogleLogin>
       <footer>
         abhinav 2026
       </footer>

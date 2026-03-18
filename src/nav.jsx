@@ -1,12 +1,13 @@
 import "./nav.css"
 
-function Nav(){
+
+function Nav({ setPage }){
     return (
         <div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Help</li>
+                <li onClick={() => setPage("home")}>Home</li>
+                <li onClick={() => setPage("about")}>About</li>
+                <li onClick={() => setPage("help")}>Help</li>
             </ul>
         </div>
     )
