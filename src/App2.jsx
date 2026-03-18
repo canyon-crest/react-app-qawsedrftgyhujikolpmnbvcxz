@@ -6,14 +6,36 @@ import './App.css'
 function App2() {
   const [count, setCount] = useState(0)
   const [increase, setIncrease] = useState(1)
+  const [apiData, setApiData] = useState('');
+
+  const fetchDogImage = async () => {
+    try {
+      const response = await fetch('https://dog.ceo/api/breeds/image/random');
+      const data = await response.json();
+      setApiData(data.message); // "message" contains the image URL
+    } catch (error) {
+      console.error('Error fetching dog image:', error);
+    }
+  };
+
 
   return (
     <>
       <h1>About page</h1>
 
-      <p className="read-the-docs">
-        this is the about page. it has information about my website.
+      <p>
+        This is my website!
       </p>
+
+
+
+
+      <button onClick={fetchDogImage}>press this for a dog</button>
+      {apiData && <img src={apiData} alt="Random Dog" />}
+
+
+
+
       <footer>
         abhinav 2026
       </footer>
