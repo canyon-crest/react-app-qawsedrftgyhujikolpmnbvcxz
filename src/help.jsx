@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Card from './Card'
 
 function Help() {
   const [count, setCount] = useState(0)
@@ -9,11 +10,12 @@ function Help() {
 
   return (
     <>
-      <h1>Help page</h1>
+      <h1>Shop</h1>
 
-      <p className="read-the-docs">
-        Help me with my math homework please.
-      </p>
+      <Card name="Chair" description="Poorly Made" />
+      <Card name="Random Rock" description="From Hawaii" />
+      <Card name="NASA Computer" description="Pretty much brand new" />
+
       <footer>
         abhinav 2026
       </footer>
